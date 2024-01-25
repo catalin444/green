@@ -49,7 +49,7 @@ body {
 }
 
 .navigation ul li:hover {
-    border-bottom: 1px solid var(--orange-color);
+    border-bottom: 2px solid var(--orange-color);
     font-weight: bold;
 }
 
@@ -179,10 +179,62 @@ h1 {
         font-size: 1rem;
     }
 
-    .header {
-        height: ;
+}
+
+
+/* Footprint */
+.footprint {
+    width: 100%;
+    margin: 6rem 0;
+}
+
+.footprint-title {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.footprint-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+}
+
+.footprint-container-element {
+    width: 15rem;
+    height: auto;
+    width: 25%;
+    margin: 2rem 1rem;
+}
+
+.footprint-container-element i {
+    font-size: 4rem;
+    color: var(--orange-color);
+    margin-bottom: 2rem;
+    line-height: 0.4;
+}
+
+.footprint-container-element h3 {
+    font-size: 2rem;
+    color: var(--orange-color);
+    line-height: 0.3;
+}
+
+@media only screen and (max-width: 750px) {
+    .footprint-container-element {
+        width: 35%;
     }
 }
 
+@media only screen and (max-width: 681px) {
+    .footprint-container-element {
+        width: 90%;
+    }
+
+    .footprint-title {
+        margin-bottom: 2.5rem;
+    }
+}
 
 
