@@ -49,7 +49,7 @@ body {
 }
 
 .navigation ul li:hover {
-    border-bottom: 2px solid var(--orange-color);
+    border-bottom: 1px solid var(--orange-color);
     font-weight: bold;
 }
 
