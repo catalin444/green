@@ -368,6 +368,10 @@ h1 {
     border: 1.5px solid var(--blue-color);
 }
 
+.team .team-content .team-content-right .social-media button i {
+    color: black;
+}
+
 .social-media button:hover {
     background-color: var(--orange-color-second);
     color: white;
