@@ -1,93 +1,421 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Green Energy</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/2f84a40973.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    <!-- Naviagation -->
-    <div class="header">
-        <div class="logo"><img src="logo.png"></div>
-        <div class="navigation">
-            <ul>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Mission</a></li>
-                <li><a href="#">Team</a></li>
-            </ul>
-        </div>
-    </div>
+html {
+    font-size: 16px;
+    --orange-color: rgb(212, 122, 51);
+    --blue-color: rgb(0, 15, 82);
+    --orange-color-second: rgba(212, 122, 51, 0.8);
+    --blue-color-second: rgba(0, 15, 82, 0.5);
+    font-family: 'Work Sans', sans-serif;
+    box-sizing: border-box;
+}
 
-    <!-- Banner -->
-    <div class="banner">
-        <div class="content">
-            <h2>The Future of</h2>
-            <h1>Energy</h1>
-            <h3>Shaping a fossil-free world by accelerating the Net-Zero transition</h3>
-        </div>
-    </div>
+body {
+    margin: 0;
+    padding: 0;
+}
 
-    <!-- Mission -->
-    <div class="mission">
-        <div class="mission-content">
-            <h2>Our Mission</h2>
-            <h3>At Green Energy, we are dedicated to driving the transition to a sustainable future. 
-                Our mission is to provide innovative and reliable green energy solutions, reducing 
-                environmental impact and fostering a cleaner, more resilient world. We strive for a 
-                future where clean energy powers progress, ensuring a healthier planet for generations to come.</h3>
-        </div>
-        <div class="image-container">
-            <img src="eolian.jpg">
-            <img src="hydro.jpg">
-            <img src="solar.jpg">
-            <img src="solarpannel.jpg">
-        </div>
-    </div>
+/* Header */
+.header {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem;
+    border-bottom: 1px solid var(--blue-color);
+    background: rgba(255, 255, 255, 1);
+    height: 3rem;
+    z-index: 1;
 
-    <!-- Footprint -->
-    <div class="footprint">
+}
 
-        <div class="footprint-title">
-            <h2>Our Green Footprint</h2>
-        </div>
+.header .logo img {
+    height: 2.5rem;
+}
 
-        <div class="footprint-container">
-            <div class="footprint-container-element">
-                <i class="fa-solid fa-trophy"></i>
-                <h3>1<sup>st</sup></h3>
-                <h4>Romanian RE Company Listed on Nasdaq</h4>
-            </div>
-            <div class="footprint-container-element">
-                <i class="fa-solid fa-lightbulb"></i>
-                <h3>17,385 GWh</h3>
-                <h4>Of Clean Energy Produced In FY23, Enough To Power ~5 Million Romanian Households Annually</h4>
-            </div>
-            <div class="footprint-container-element">
-                <i class="fa-solid fa-smog"></i>
-                <h3>14 M Tons</h3>
-                <h4>Carbon Emissions Avoided Through Our Operations</h4>
-            </div>
-            <div class="footprint-container-element">
-                <i class="fa-solid fa-solar-panel"></i>
-                <h3>1.9%</h3>
-                <h4>Of Romania’s Total Installed Power Capacity</h4>
-            </div>
-            <div class="footprint-container-element">
-                <i class="fa-solid fa-users"></i>
-                <h3>1 M+</h3>
-                <h4>Lives Positively Impacted Through Socio-Economic Programs</h4>
-            </div>
-            <div class="footprint-container-element">
-                <i class="fa-solid fa-faucet-drip"></i>
-                <h3>0.318 M</h3>
-                <h4>Kilolitres Of Water Saved Through Our Operational Efficiency</h4>
-            </div>
-        </div>
-    </div>
-</body>
-</html>
+.navigation {
+    margin-right: 2rem;
+}
+
+.navigation ul {
+    display: flex;
+}
+
+.navigation ul li {
+    list-style: none;
+    margin-left: 1.5rem;
+    font-size: 1.125rem;
+}
+
+.navigation ul li a {
+    text-decoration: none;
+    color: var(--blue-color);
+    letter-spacing: 0.08rem;
+}
+
+.navigation ul li:hover a {
+    color: var(--orange-color);
+}
+
+
+@media only screen and (max-width: 450px) {
+    .header .logo img {
+        height: 1.8rem;
+    }
+
+    .navigation ul li {
+        font-size: 0.85rem;
+        margin-left: 1rem;
+    }
+}
+
+@media only screen and (max-width: 700px)  {
+    .header {
+        height: 2rem;
+    }
+}
+
+/* Banner */
+.banner {
+    width: 100%;
+    height: 60rem;
+    background: url(resources/banner.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 2px solid var(--blue-color);
+}
+
+.content {
+    color: white;
+    margin: 0 5%;
+}
+
+.content h1 , h2 {
+    line-height: 0.2;
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+h1 {
+    font-size: 6rem;
+}
+
+/* Mission */
+.mission {
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 5%;
+    height: auto;
+}
+
+.mission-content {
+    width: 60%;
+    color: var(--blue-color);
+    line-height: 1.6;
+}
+
+.image-container {
+    width: 35rem;
+    height: 35rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: space-between;
+}
+
+.image-container img {
+    width: 15rem;
+    height: 15rem;
+    border: 1px solid var(--blue-color);
+}
+
+.mission-content h2 {
+    line-height: 0;
+}
+
+@media only screen and (max-width: 1648px) {
+    .mission-content {
+        width: 50%;
+        margin-bottom: 1rem;
+    }
+}
+
+
+@media only screen and (max-width: 1304px) {
+    .mission {
+        flex-direction: column;
+    }
+
+    .mission-content {
+        width: 100%;
+    }
+
+    .image-container {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+}
+
+@media only screen and (max-width: 1106px) {
+    .image-container {
+        width: 100%;
+        height: auto;
+    }
+
+    .image-container img {
+        width: 40vw;
+        height: 40vw;
+        margin-bottom: 6vw;
+    }
+}
+
+
+@media only screen and (max-width: 630px) {
+    .image-container {
+        margin-bottom: 1.5rem;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+}
+
+
+/* Footprint */
+.footprint {
+    width: 100%;
+    padding: 0 5% 2rem 5%;
+    color: var(--blue-color);
+    box-sizing: border-box;
+}
+
+.footprint-title {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.footprint-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 100%;
+    text-align: center;
+}
+
+.footprint-container-element h4 {
+    line-height: 1.6;
+}
+
+.footprint-container-element {
+    width: 15rem;
+    height: auto;
+    width: 25%;
+    margin: 2rem 1rem;
+}
+
+.footprint-container-element i {
+    font-size: 4rem;
+    color: var(--orange-color-second);
+    margin-bottom: 2rem;
+    line-height: 0.4;
+    -webkit-text-stroke: 0.4px black;
+}
+
+.footprint-container-element h3 {
+    font-size: 2rem;
+    color: var(--orange-color-second);
+    line-height: 0.3;
+    -webkit-text-stroke: 0.4px black;
+}
+
+@media only screen and (max-width: 804px) {
+    .footprint-container-element {
+        width: 35%;
+    }
+
+    .footprint h2 , h3 {
+        line-height: 1.2;
+    }
+}
+
+@media only screen and (max-width: 681px) {
+    .footprint-container-element {
+        width: 90%;
+    }
+
+    .footprint-title {
+        margin-bottom: 2.5rem;
+    }
+}
+
+
+/* Founded */
+
+.founded {
+    text-align: center;
+    margin: 1rem 12% 4rem 12%;
+    color: var(--blue-color);
+}
+
+.founded h2 {
+    line-height: 1.2;
+    font-weight: 500;
+    font-size: 2.5rem;
+}
+
+.founded button {
+    font-size: 1rem;
+    padding: 1rem 2rem;
+    border-radius: 4rem;
+    background-color: var(--orange-color-second);
+    border: 1px solid black;
+    font-weight: bold;
+    color: white;
+}
+
+.founded button:hover {
+    background-color: var(--blue-color);
+    color: white;
+}
+
+.founded b:hover {
+    color: var(--orange-color-second);
+}
+
+@media only screen and (max-width: 681px) {
+    .founded {
+        margin: 0.8rem 8% 4rem 8%;
+    }
+
+    .founded h2 {
+        font-size: 1.6rem;
+    }
+}
+
+/* Team */
+.team {
+    padding: 2rem 5%;
+    color: var(--blue-color);
+    margin-bottom: 5rem;
+}
+
+.team h2 {
+    width: 60%;
+    line-height: 1.2;
+}
+
+.team-content-left img {
+    width: 25rem;
+    filter: brightness(90%);
+    margin-right: 4rem;
+    border-radius: 20rem;
+    border: 2px solid var(--blue-color);
+}
+
+.team-content {
+    display: flex;
+    flex-direction: row;
+}
+
+.name {
+    line-height: 0.2;
+    color: var(--blue-color);
+    margin-bottom: 1rem;
+}
+
+
+.name h3 {
+    font-size: 2rem;
+}
+
+.name h4 {
+    color: var(--orange-color);
+    opacity: 0.7;
+}
+
+.team-content-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.social-media {
+    margin-bottom: 1rem;
+}
+
+.social-media button {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 20rem;
+    margin-right: 0.6rem;
+    border: 1.5px solid var(--blue-color);
+}
+
+.social-media button:hover {
+    background-color: var(--orange-color-second);
+    color: white;
+}
+
+.about p {
+    font-size: 1rem;
+}
+
+@media only screen and (max-width: 1270px) {
+    .team h2 {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 855px) {
+    .team h2 {
+        text-align: center;
+    }
+
+    .team-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-content-left img {
+        margin-right: 0;
+        width: 40vw;
+    }
+
+    .team-content-right {
+        text-align: center;
+    }
+
+    .name h3 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    background-color: var(--blue-color-second);
+    color: white;
+    padding: 0.6rem;
+    border-top: 1px solid black;
+}
+
+.footer p {
+    font-size: 0.8rem;
+}
